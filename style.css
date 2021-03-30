@@ -1,5 +1,5 @@
 * {
-  font-size: 30px;
+  font-size: 40px;
   color: rgb(2, 44, 30);
 }
 body {
@@ -7,4 +7,5 @@ body {
   background-position: center;
   background-size: cover;
   background-size: 600px;
+  padding: 250px;
 }

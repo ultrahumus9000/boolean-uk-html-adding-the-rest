@@ -9,27 +9,82 @@
   grid-template:
     "one two three" 50px
     "one four five" 1fr/
-    50px 200px 1fr;
+    100px 200px minmax(300px, 1fr);
   height: 100vh;
   width: 100vw;
 }
 .one {
+  display: grid;
   grid-area: one;
-  background-color: rgb(142, 17, 17);
+  background-color: rgb(231, 203, 203);
+  border: 2px solid cornflowerblue;
+  grid-gap: 5px;
+  grid-auto-rows: 30px;
 }
+.one p {
+  display: grid;
+  border: 2px solid rgb(218, 92, 117);
+  padding: 3px;
+}
+
 .two {
   grid-area: two;
-  background-color: rgb(92, 66, 125);
+  background-color: rgb(219, 200, 245);
+  border: 2px solid cornflowerblue;
 }
+
 .three {
   grid-area: three;
-  background-color: rgb(47, 96, 103);
+  background-color: rgb(200, 239, 245);
+  border: 2px solid cornflowerblue;
 }
 .four {
+  display: grid;
   grid-area: four;
-  background-color: rgb(100, 123, 106);
+  background-color: rgb(240, 188, 217);
+  border: 2px solid cornflowerblue;
+  grid-template-rows: 200x minmax(700px, 1fr) 600px;
 }
+.fourone img {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+}
+.fourone {
+  display: grid;
+  place-content: center;
+  border: 2px solid cornflowerblue;
+  text-align: center;
+}
+
+.fourtwo {
+  display: grid;
+  border: 2px solid cornflowerblue;
+  grid-template-rows: 120px 100px 200px;
+  overflow: scroll;
+}
+.class p,
+.general p,
+.pear p {
+  display: grid;
+  border: 2px solid cornflowerblue;
+  grid-auto-rows: 30px;
+  overflow: scroll;
+}
+.fourthree {
+  display: grid;
+  border: 2px solid cornflowerblue;
+}
+
 .five {
+  display: grid;
   grid-area: five;
-  background-color: rgb(13, 108, 78);
+  background-color: rgb(246, 255, 222);
+  border: 2px solid cornflowerblue;
+  grid-template-rows: 700px minmax(100px, 1fr);
+}
+.fiveone,
+.fivetwo {
+  display: grid;
+  border: 2px solid cornflowerblue;
 }
