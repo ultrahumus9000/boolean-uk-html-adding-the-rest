@@ -43,7 +43,7 @@
   grid-area: four;
   background-color: rgb(240, 188, 217);
   border: 2px solid cornflowerblue;
-  grid-template-rows: 200x minmax(700px, 1fr) 600px;
+  grid-template-rows: 200px minmax(600px, 1fr) 300px;
 }
 .fourone img {
   border-radius: 50%;
@@ -60,16 +60,20 @@
 .fourtwo {
   display: grid;
   border: 2px solid cornflowerblue;
-  grid-template-rows: 120px 100px 200px;
+  grid-template-rows: 150px 200px 200px;
   overflow: scroll;
+}
+.class,
+.general,
+.pear {
+  display: grid;
+  grid-auto-rows: 40px;
 }
 .class p,
 .general p,
 .pear p {
   display: grid;
   border: 2px solid cornflowerblue;
-  grid-auto-rows: 30px;
-  overflow: scroll;
 }
 .fourthree {
   display: grid;
