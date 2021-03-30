@@ -7,84 +7,91 @@
   background-color: bisque;
   padding: 20px;
 }
+
 .container {
   display: grid;
   grid-template:
     "left main right" 1fr/
-    200px 1fr 300px;
+    200px minmax(300px, 1fr) 300px;
   height: 100vh;
 }
 .left {
+  padding: 5px;
+  display: grid;
   grid-area: left;
   border: 5px solid coral;
+  grid-template-rows: minmax(200px, 400px) 1fr 300px;
+  grid-gap: 5px;
+}
+.lefts {
   display: grid;
-  grid-template:
-    "left-one" 200px
-    "left-two" 100px
-    "left-three" 1fr/
-    200px;
+  grid-gap: 10px;
+  border: 3px solid coral;
+  padding: 5px;
 }
-.left-one {
-  grid-area: left-one;
-  background-color: cornsilk;
-}
-
-.left-two {
-  grid-area: left-two;
-  background-color: rgb(140, 139, 133);
-}
-
-.left-three {
-  grid-area: left-three;
-
-  background-color: rgb(183, 183, 209);
+.left-top {
+  display: grid;
+  padding: 5px;
+  grid-template-rows: repeat(autofit, minmax(200px, 400px));
+  grid-gap: 10px;
+  overflow: scroll;
+  height: 400px;
 }
 .right {
+  padding: 5px;
+  display: grid;
   grid-area: right;
   border: 5px solid coral;
+  grid-gap: 5px;
+  grid-template-rows: auto 120px 1fr;
+}
+.rights {
+  padding: 5px;
   display: grid;
-  grid-template:
-    "right-one" 100px
-    "right-two" 200px
-    "right-three" 300px
-    "right-four" 1fr/
-    300px;
+  border: 3px solid coral;
+  grid-gap: 10px;
+  align-content: center;
 }
-.right-one {
-  grid-area: right-one;
-  background-color: rgb(111, 111, 138);
+.right h2 {
+  padding: 5px;
 }
-.right-two {
-  grid-area: right-two;
-  background-color: rgb(157, 143, 143);
-}
-.right-three {
-  grid-area: right-three;
-  background-color: rgb(133, 94, 94);
-}
-.right-four {
-  grid-area: right-four;
-  background-color: rgb(187, 125, 180);
+li {
+  display: grid;
+  list-style-type: none;
+  border: 2px solid rgb(128, 127, 127);
+  background-color: rgb(207, 243, 247);
 }
 .main {
+  display: grid;
   grid-area: main;
   border: 5px solid coral;
+  grid-gap: 10px;
+  overflow: scroll;
+  padding: 5px;
+  grid-template-rows: repeat(autofit, minmax(500px, 1fr));
 }
-
+p {
+  display: grid;
+  border: 2px solid rgb(128, 127, 127);
+  background-color: rgb(207, 243, 247);
+  place-content: center;
+}
 @media screen and (max-width: 900px) {
   .container {
     grid-template:
       "left main right" 1fr/
-      200px 1fr 50px;
+      200px minmax(300px, 1fr) 50px;
   }
-  @media screen and (max-width: 500px) {
-    .container {
-      grid-template:
-        "main right" 1fr/
-        1fr 50px;
-    }
-    .left {
-      display: none;
-    }
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    grid-template:
+      "main" 1fr /
+      minmax(300px, 1fr);
+  }
+  .left,
+  .right {
+    display: none;
   }
 }
