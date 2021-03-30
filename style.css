@@ -1,0 +1,10 @@
+* {
+  font-size: 30px;
+  color: rgb(2, 44, 30);
+}
+body {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShKW-o-RHzvX-XMQoz7xY13gXi0mCW7A4Kow&usqp=CAU");
+  background-position: center;
+  background-size: cover;
+  background-size: 600px;
+}
