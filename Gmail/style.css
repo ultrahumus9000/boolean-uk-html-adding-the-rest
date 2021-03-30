@@ -35,7 +35,6 @@
   grid-template-rows: repeat(autofit, minmax(200px, 400px));
   grid-gap: 10px;
   overflow: scroll;
-  height: 400px;
 }
 .right {
   padding: 5px;
