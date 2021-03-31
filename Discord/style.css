@@ -41,7 +41,7 @@
   display: grid;
   grid-area: four;
   border: 2px solid cornflowerblue;
-  grid-template-rows: 200px 500px 300px;
+  grid-template-rows: 200px 500px minmax(300px, 1fr);
 }
 .fourone img {
   border-radius: 50%;
